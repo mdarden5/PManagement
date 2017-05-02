@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ajax Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        
+        
+    </head>
+    <body>
+        <input name ="placeholder" id="placeholderRequest"> 
+        <button id="placeholderButton" > Fireoff! </button>
+        <script>
+            $(document).ready(function() {
+                var placeholderRequest = $("#placeholderRequest");
+                
+                var placeholderButton = $("#placeholderButton");
+
+                 
+                     
+                $(placeholderButton).click(function(event) {
+                event.preventDefault();
+
+//                $.ajax(
+//                    { url:'http://localhost:8084/PManagement/JsonServlet',
+//                    dataType: 'jsonp',
+//                    traditional: true,
+//                    data: {
+//                            "test1": "lips",
+//                            "test2": "252552",
+//                            "test3": "star"
+//                    },
+//                    success: function() {
+//                        var jObject =  JSON.stringify(data);
+//                        alert(jObject.length);
+//                   },
+//                    error: function(e) {     
+//                        debugger;
+//                        alert("error " + e);
+//                        
+//                   }
+//                   
+//                });
+
+
+//            $.post('http://localhost:8084/PManagement/JsonServlet',{
+//                            test1: "lips",
+//                            test2: "252552",
+//                            test3: "star"
+//                    },function(data,status){ 
+//                    alert("DATA RECEIVED " + data + " " + status);
+//                });
+//
+//             });    
+//        });
+                 
+                 
+                 
+                 
+                 $.ajax('http://localhost:8084/PManagement/JsonServlet',{
+    'data': JSON.stringify({
+                            COMMANDKEY: "LOGIN",
+                            test2: "252552",
+                            test3: "star"
+                    }), //{action:'x',params:['a','b','c']}
+    'type': 'POST',
+    'processData': false,
+    'contentType': 'application/json' //typically 'application/x-www-form-urlencoded', but the service you are calling may expect 'text/json'... check with the service to see what they expect as content-type in the HTTP header.
+                 });
+             });    
+        });
+          
+        </script>
+    </body>
+</html>

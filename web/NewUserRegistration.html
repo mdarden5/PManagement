@@ -1,0 +1,23 @@
+
+
+<head>
+        <title>Property Management</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>New User Registration</h1>
+        <div>
+            <h2>Please login</h2>
+            <form action="http://localhost:8084/PManagement/MainServlet" method="post"> <!-- cluster data and submit data-->
+                <p> Create Username </p>
+                <input name="USERNAME"> 
+                
+                <p> Create Password </p>
+                <input name="PASSWORD">   
+                <input type="hidden" value="NEWREGISTRATION" name="COMMANDKEY">
+                <button>Create an Account</button>
+            </form>
+        </div>   
+            
+    </body>

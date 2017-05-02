@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 6, 2017, 1:03:07 AM
+    Author     : Miltron
+*/
+
+
+h1 {
+    background-color: white;
+}
+body{
+    background-color: powderblue;
+}
+#Welcome{
+    background-color: teal;
+}
+
+#CreateAccountButton{
+    margin-top: 250px;
+    margin-right: 20px;
+}
+#CreateAccount {
+    margin-top: 75px;
+}
+.Algnmnt{
+    
+   
+}
+#loginButton{
+    margin-top: 22px;
+}
+label{
+    text-shadow: 0px 2px white;
+    font-size: 95%;
+    
+}
+.rowTwoAlgn{
+    margin-top: 75px;
+}

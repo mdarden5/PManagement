@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+    <head>
+        <title>Property Management</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="LoginCSS.css">
+        
+    </head>
+    <style></style>
+    <body>
+       <div class = "row" id="Welcome"><!--log in functionality-->
+           <div class="col-md-6 col-xs-12">
+                <h3 style= "color: black;">Welcome to Property Management</h3>
+            </div>
+        <form action="http://localhost:8084/PManagement/MainServlet" method="post"> <!-- clPManagement/web/NewUserRegistration.htmluster data and submit data-->
+            <div class="col-md-2 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12"> 
+                        <label> Username </label>
+                    </div>
+                    <div class="col-md-12 col-xs-12" >
+                        <input name="USERNAME" > 
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12"> 
+                        <label> Password </label>
+                    </div>
+                    <div class="col-md-12 col-xs-12" >
+                        <input name="PASSWORD">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <div class="col-xs-12"></div>
+                <div class=" col-xs-12">
+                    <input type="hidden" value="LOGIN" name="COMMANDKEY">
+                    <button id="loginButton">Login</button>
+                </div>
+<!--       <a href="http://localhost:8084/PManagement/NewUserRegistration.html">need an account?</a> Replace with form -->
+            </div>
+        </form>     
+        </div>
+        <div id="CreateAccount"> <!-- New User Registration -->
+        <form action="http://localhost:8084/PManagement/MainServlet" method="post"> <!-- cluster data and submit data-->
+            
+            <div class="row" >
+                <div class="col-xs-4"></div>
+                <div class="col-xs-8">
+                    <h2> Create an Account </h2>
+                </div>
+                <div class="col-xs-3" ></div>
+                <div class="col-xs-2">
+                    <input name="USERNAME" placeholder="Username"> 
+                </div>
+                <div class="col-xs-5">
+                    <input name="PASSWORD" placeholder="Password">
+                </div>
+            </div>
+            
+            <div class="row" > <!-- outer row -->
+                <div class ="col-xs-3"></div>
+                <div class ="col-xs-1">
+                <div class="rowTwoAlgn" >    
+                    <div class="row"> <!-- nested row -->
+                        <div class="col-xs-12">
+                            <label> Property ID: </label>
+                        </div>
+                        <div class="col-xs-12">
+                            <input name="PropertyID" placeholder="Example MDRX34" id="PropertyID" >
+                            <input type="hidden" value="NEWREGISTRATION" name="COMMANDKEY">
+                        </div>
+                    </div>  <!-- End of Nested row -->
+                </div>
+            </div>
+                <div class ="rowTwoAlgn">
+                    <div class ="col-xs-2">
+                        <div class="row">  <!-- nested row -->
+                            <div class="col-xs-5"></div>
+                            <div class="col-xs-7">
+                                <label> Account Type: </label>
+                            </div>
+                            <div class="col-xs-5"></div>
+                            <div class="col-xs-3">
+                                <select name="UserAccountType" class="AccntAndProperty">
+                                    <option> Select One </option>
+                                    <option value="PropertyManager">Property Manager</option>
+                                    <option value="Tenant">Tenant</option>
+                                </select>    
+                            </div>
+                        </div> <!-- End of Nested row -->
+                    </div>
+                </div>
+                    <div class="col-xs-2" >
+                        <button id="CreateAccountButton"> Create Account </button>
+                    </div>
+        </div><!-- End of Outer row -->
+         
+            </div>
+        
+    </body>
